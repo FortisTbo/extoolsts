@@ -1,15 +1,16 @@
 package be.abis.courseadmin.model;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Course {
 	private String title;
 	private int numberOfDays;
 	private double pricePerDay;
 	private boolean priorKnowledgeRequired;
-	private Instructors instructors;
+	private ArrayList<Instructor> instructors;
 
-	public Course(String title, int numberOfDays, double pricePerDay, boolean priorKnowledgeRequired, Instructors instructors) {
+	public Course(String title, int numberOfDays, double pricePerDay, boolean priorKnowledgeRequired, ArrayList<Instructor> instructors) {
 		this.title = title;
 		this.numberOfDays = numberOfDays;
 		this.pricePerDay = pricePerDay;
@@ -49,11 +50,11 @@ public class Course {
 		this.priorKnowledgeRequired = priorKnowledgeRequired;
 	}
 	
-	public Instructors getInstructors() {
+	public ArrayList<Instructor> getInstructors() {
 		return instructors;
 	}
 
-	public void setInstructors(Instructors instructors) {
+	public void setInstructors(ArrayList<Instructor> instructors) {
 		this.instructors = instructors;
 	}
 
@@ -70,7 +71,10 @@ public class Course {
 
 		System.out.println(line);
 		System.out.println("Give by : ");
-		this.instructors.printInstructors ();
+		for (int i=0; i <instructors.size();i++ ) {
+			Instructor instructor = this.instructors.get(i);
+			System.out.println("- " + instructor.getFirstName() + " " + instructor.getLastName());
+		}
 	}
 	
 	public String printInfo() {
