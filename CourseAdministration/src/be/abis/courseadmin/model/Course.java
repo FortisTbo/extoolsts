@@ -73,7 +73,7 @@ public class Course {
 		System.out.println("Give by : ");
 		for (int i=0; i <instructors.size();i++ ) {
 			Instructor instructor = this.instructors.get(i);
-			System.out.println("- " + instructor.getFirstName() + " " + instructor.getLastName());
+			System.out.println("-> " + instructor.toString());
 		}
 	}
 	
