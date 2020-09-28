@@ -101,8 +101,7 @@ public class Instructor {
 	}
 
 	public String toString() {
-		String instructorToString = getFirstName() + " " + getLastName() + " " + getAge();
-
-		return instructorToString;
+		
+		return firstName + " " + lastName + " (" +  getAge() +")";
 	}
 }

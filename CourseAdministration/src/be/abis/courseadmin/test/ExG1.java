@@ -13,6 +13,7 @@ public class ExG1 {
 		try {
 			Instructor instructor1 = new Instructor("FirstNameInstr1", "LastNameInstr1", "16/08/1978", 23, 2000.0);
 			instructor1.printSalaryHistory("salaryhistory1.txt");
+			System.out.println(instructor1);
 
 			Instructor instructor2 = new Instructor("FirstNameInstr2", "LastNameInstr2", "16/08/1957", 25, 1900.0);
 			instructor2.printSalaryHistory("salaryhistory2.txt");
