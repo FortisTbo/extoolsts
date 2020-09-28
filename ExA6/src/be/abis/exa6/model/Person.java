@@ -19,6 +19,15 @@ public class Person {
 		this.birthDate = birthDate;
 		this.company = company;
 	}
+	
+	public Person(int personNumber, String firstName, String lastName, LocalDate birthDate) {
+
+		this.personNumber = personNumber;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthDate = birthDate;
+		this.company = null;
+	}
 
 	public int getPersonNumber() {
 		return personNumber;

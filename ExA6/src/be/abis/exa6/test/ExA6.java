@@ -21,7 +21,7 @@ public class ExA6 {
 		System.out.println(person);
 		
 		
-		Person person2 = new Person (2, "Doe", "John" , LocalDate.of(1966,5,5),null);
+		Person person2 = new Person (2, "Doe", "John" , LocalDate.of(1966,5,5));
 		
 		System.out.println(person2);
 
