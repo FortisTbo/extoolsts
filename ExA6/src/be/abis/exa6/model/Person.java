@@ -60,7 +60,7 @@ public class Person {
 		this.company = company;
 	}
 
-	public int getAge() {
+	public int calculateAge() {
 		LocalDate currentDate = LocalDate.now();
 
 		return Period.between(this.birthDate, currentDate).getYears();
@@ -68,7 +68,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		String outputText = "Person " + personNumber + " " + lastName + " " + firstName + " (" + getAge() + " years old)";
+		String outputText = "Person " + personNumber + " " + lastName + " " + firstName + " (" + calculateAge() + " years old)";
 
 		if (company == null) {
 			outputText += " is not employed for the moment";
